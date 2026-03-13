@@ -4,7 +4,7 @@
 
 <p align="justify">
 
-This module aims to provide a comprehensive understanding of <strong>algorithmic foundations</strong>, covering fundamental concepts to advanced topics essential for computer science practitioners. Through a structured approach, it aims to familiarise students with the theoretical underpinnings, practical methodologies, and techniques in <strong>algorithm design, analysis, and implementation</strong>. By delving into mathematical foundations, asymptotic analysis, recurrence relations, divide and conquer strategies, sorting algorithms, dynamic programming, and greedy algorithms, students will gain a holistic view of algorithmic problem-solving.
+This module introduces students to the fundamental concepts and practices of software architecture, system design, and Domain-Driven Design (DDD). It covers various architectural styles, patterns, and principles, emphasizing the importance of architectural thinking and domain modeling in creating robust, scalable, and maintainable software systems. Students will learn to analyze trade-offs, identify appropriate architectural characteristics, apply different architectural styles, and use DDD techniques to solve complex software design problems.
 
 </p>
 
@@ -12,21 +12,15 @@ This module aims to provide a comprehensive understanding of <strong>algorithmic
 
 On completion of the module, students will be able to:
 
-🎯 Define key concepts in number theory, combinatorics, and probability theory as they relate to algorithmic design.
-
-🎯 Explain the principles of asymptotic analysis and the role of algorithms in computing.
-
-🎯 Assess the efficiency of different approaches to solving recurrence relations, including the substitution method, recursion-tree method, and master method.
-
-🎯 Implement divide-and-conquer algorithms such as Strassen's algorithm for matrix multiplication and the Fast Fourier Transform.
-
-🎯 Compare and contrast various sorting algorithms, evaluating their time complexity and performance characteristics.
-
-🎯 Design dynamic programming solutions for complex problems such as the rod cutting problem and optimal binary search trees.
-
-🎯 Develop greedy algorithms for optimization problems, such as the fractional knapsack problem and activity selection.
-
-🎯 Examine the principles and applications of randomised algorithms in problem-solving. - Critique the effectiveness of different algorithm design paradigms (divide-and-conquer, dynamic programming, greedy) for various problem types.
+1.  Explain the fundamental concepts of software architecture and its importance in system design.
+2.  Analyze and evaluate different architectural styles and patterns, understanding their strengths and weaknesses.
+3.  Design and document software architectures using standard notations and tools.
+4.  Apply architectural tactics to address quality attributes such as performance, scalability, and security.
+5.  Implement layered architectures and understand the principles of separation of concerns.
+6.  Develop domain models and translate them into software designs.
+7.  Conduct architectural reviews and make informed design decisions based on requirements and constraints.
+8.  Revise existing architectures to improve design and accommodate changing requirements.
+9.  Defend architectural decisions in both written and oral forms
 
 ## Learning and Teaching Approach
 
@@ -39,7 +33,7 @@ On completion of the module, students will be able to:
   </tr>
   <tr>
     <td rowspan="2">Contact</td>
-    <td>Lecture/Flipped Classroom</td>
+    <td>Lecture</td>
     <td>2</td>
     <td rowspan ="2">60</td>
   </tr>
@@ -71,33 +65,19 @@ On completion of the module, students will be able to:
 
 ## Assessment Approach:
 
-The assessment approach of the following continuous
-assessments (CA) comprises CA theory - 40%, and CA Practical - 60%, The
-CA theory consists of a mid-term test, class test, and a quiz. The CA
-practical will include practical assignments each weighing 15%.
+Assessment components consist of Continuous Assessment (CA) Theory - 60% and Continuous Assessment (CA) Practical - 40%. The CA Theory will consist of Practical Work & Reports (30%) & Architectural Case Studies (30%) and CA Practical consists of a Final Project (40%). Assessments will be carried out continuously through the following assessment components:
 
-**A. Mid-term Test: (15%)** Students will take a written test of 2-hour
-duration covering topics up to the middle of the semester.
+**A. Practical Work & Reports: (20%)** Students are required to attend 2 hours of allocated weekly practical classes.
 
-**B. Class Test: (15%)** Students will take a written test of 1-hour
-duration covering topics after the mid-term test in the 10th week.
+**B. Architectural Case Studies: (20%)** Students will undertake 2 architectural case studies as a group throughout the semester. Students will analyze and evaluate real-world software architectures, identifying strengths, weaknesses, and potential improvements
 
-**C. Quiz: (10%)** During the 12th week, students will take an in-class,
+**C. Mid-Term Test: (20%)** During the 12th week, students will take an in-class,
 closed-book quiz. The tutor will organise the quiz, which will cover 70%
 of the syllabus content.
 
-**D. Programming Assignments (60%)** Students are required to complete
-four programming assignments throughout the semester. Each assignment
-will build upon the concepts covered in the lectures and practical
-sessions.\
-Each assignment shall be assessed out of 15 marks as follows:\
+**D. Final Project: (40%)** Students will design and document a comprehensive software architecture for a complex system, incorporating all major concepts learned in the module. Students will undertake a final project as a group. The students will start selecting their project topic in the 7th week which they will have to cover all concepts learnt as they progress through the semester in the lectures and practical sessions. The project presentation will be done in the 14th and 15th weeks.
 
-- **5 marks:** Analysis and problem-solving skills\
-- **5 marks:** Application of concepts\
-- **3 marks:** Presentation and explanation of solutions\
-- **2 marks:** Timely submission and correctness
-
-Pre-requisites: CSF101 Programming Methodology
+Pre-requisites: None
 
 <!-- {{ youtube_embed("https://www.youtube.com/watch?v=dQw4w9WgXcQ", title="Never Gonna Give You Up") }}
 {{ youtube_embed("dQw4w9WgXcQ", title="Wider Video", width="90%") }}

@@ -1,12 +1,4 @@
-**Contributed by:** Namgay Lhamo  
-**Student ID:** 02240350  
-**Date:** 06 May 2026  
-**Course:** SDA202
-
----
-
 ## 2.2 Monolithic Versus Distributed Architectures
-
 
 ### What is Monolithic Architecture?
 
@@ -14,12 +6,14 @@ A monolithic architecture is a software design where all components (presentatio
 
 ![Monolithic](../image/monolithic.jpeg)
 **Characteristics:**
+
 - Single deployment unit (one JAR/WAR file)
 - All components run together
 - Shared database
 - Local method calls between components
 
 **When to Use Monolithic:**
+
 - Small, simple applications
 - Starting point for new projects
 - Tight budget and time constraints
@@ -27,6 +21,7 @@ A monolithic architecture is a software design where all components (presentatio
 - Familiar to most developers
 
 **Advantages:**
+
 - Simple to develop initially
 - Easy to test end-to-end
 - Low cost
@@ -34,28 +29,33 @@ A monolithic architecture is a software design where all components (presentatio
 - Straightforward deployment
 
 **Disadvantages:**
+
 - Hard to scale individual parts
 - Affects maintainability as app grows
 - Slower development over time
 - Architecture sinkhole anti-pattern (requests pass through layers with no processing)
 
 ### What is Distributed Architecture?
+
 ![distributed](../image/distributed.jpeg)
 A distributed architecture has multiple independent deployment units that communicate through remote access protocols (REST API, messaging, etc.).
 
 **Characteristics:**
+
 - Multiple deployment units
 - Independent services
 - Network communication
 - Decentralized data
 
 **Advantages:**
+
 - Better performance
 - Scalability
 - Deployability
 - High availability
 
 **Disadvantages:**
+
 - Complex to build
 - Significant trade-offs
 - More expensive
@@ -63,15 +63,15 @@ A distributed architecture has multiple independent deployment units that commun
 
 ### Architecture Types Comparison
 
-| Aspect | Monolithic | Distributed |
-|--------|------------|-------------|
-| Deployment | Single unit | Multiple units |
-| Communication | Local method calls | Network calls (REST, messaging) |
-| Data | Single database | Multiple databases |
-| Cost | Low | High |
-| Complexity | Simple at start | Complex from beginning |
-| Scalability | Scale everything | Scale individual services |
-| Team Structure | One team | Multiple teams |
+| Aspect         | Monolithic         | Distributed                     |
+| -------------- | ------------------ | ------------------------------- |
+| Deployment     | Single unit        | Multiple units                  |
+| Communication  | Local method calls | Network calls (REST, messaging) |
+| Data           | Single database    | Multiple databases              |
+| Cost           | Low                | High                            |
+| Complexity     | Simple at start    | Complex from beginning          |
+| Scalability    | Scale everything   | Scale individual services       |
+| Team Structure | One team           | Multiple teams                  |
 
 ![monolithic vs distributed architecture](image/monolithic vs distributed.jpeg)
 
@@ -85,12 +85,12 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 
 ![fallacies of distributed systems](../image/fallacies_of_distributed_systems.jpeg)
 
-
 ### Fallacy 1: The Network is Reliable
 
 **The Mistake:** Believing the network will always work without problems.
 
 **Reality:** Networks are vulnerable to:
+
 - Packet drops
 - Delays
 - Connection loss
@@ -99,6 +99,7 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 - Physical disruptions
 
 **How to Fix:**
+
 - Build flexible, reliable mechanisms
 - Implement proper retry logic
 - Add redundancy features
@@ -110,15 +111,18 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **The Mistake:** Assuming data transfers instantly across networks.
 
 **Reality:** Multiple causes of latency:
+
 - Distance between destinations
 - Network congestion
 - Processing delays
 
 **Compare:**
+
 - Monolithic: Local calls in nanoseconds
 - Distributed: Remote calls in milliseconds
 
 **How to Fix:**
+
 - Use caching
 - Implement asynchronous communication
 - Consider latency in design
@@ -132,11 +136,13 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **Reality:** Bandwidth is the amount of data that can be transferred over time. It can be a rate-limiting factor for high-tempo applications.
 
 **Example:**
+
 - 1000 concurrent requests can eat up bandwidth
 - Slows down the network
 - Increases latency between calls
 
 **How to Fix:**
+
 - Use compression
 - Implement data encoding
 - Prioritize critical data
@@ -149,12 +155,14 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **The Mistake:** Believing the network is inherently safe.
 
 **Reality:** Networks can be:
+
 - Tapped (eavesdropped)
 - Breached
 - Attacked by unfriendly actors
 - At higher risk in distributed systems (more surface area)
 
 **How to Fix:**
+
 - Use encryption
 - Implement authentication
 - Add authorization
@@ -168,12 +176,14 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **The Mistake:** Assuming network topology is fixed.
 
 **Reality:** Topology changes all the time:
+
 - New nodes added
 - Existing nodes fail
 - Configurations altered
 - Routers, hubs, switches, firewalls change
 
 **How to Fix:**
+
 - Use dynamic routing techniques
 - Implement load balancing
 - Add self-healing capabilities
@@ -188,6 +198,7 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **Reality:** Distributed systems operate across multiple administrative territories. There is never a single administrator.
 
 **Who is involved:**
+
 - Network team
 - Security team
 - Database team
@@ -195,6 +206,7 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 - Application team
 
 **How to Fix:**
+
 - Clear communication channels
 - Uniform protocols
 - Shared leadership structures
@@ -207,6 +219,7 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **The Mistake:** Believing network communication has no cost.
 
 **Reality:** Transport cost includes:
+
 - Network bandwidth usage
 - Power consumption
 - Additional hardware costs
@@ -214,10 +227,12 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 - New subnets, proxies
 
 **Monolithic vs Distributed:**
+
 - Monolithic: Local method calls (no transport cost)
 - Distributed: REST calls (significant cost)
 
 **How to Fix:**
+
 - Streamline data traffic
 - Cut unnecessary costs
 - Use resource-friendly infrastructure
@@ -229,12 +244,14 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **The Mistake:** Assuming all network parts are the same.
 
 **Reality:** Networks have diverse elements:
+
 - Different hardware vendors
 - Different configurations
 - Different operating parameters
 - Not all vendors work well together
 
 **How to Fix:**
+
 - Design for diversity
 - Build flexible systems
 - Create adaptable properties
@@ -249,6 +266,7 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **Reality:** Distributed systems consist of multiple interacting components. They are separate and complex systems.
 
 **How to Fix:**
+
 - Manage component interactions carefully
 - Track dependencies
 - Monitor integration points
@@ -261,11 +279,13 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **The Mistake:** Believing you can see everything happening.
 
 **Reality:** Achieving perfect listening to all components is very difficult due to:
+
 - Inherent complexity
 - System size
 - Low transparency for monitoring
 
 **How to Fix:**
+
 - Implement proper logging
 - Add monitoring tools
 - Use distributed tracing
@@ -278,11 +298,13 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **The Mistake:** Assuming no downtime ever.
 
 **Reality:** Downtime happens from:
+
 - Scheduled maintenance
 - System failures
 - Network problems
 
 **How to Fix:**
+
 - Build redundancy
 - Implement failover
 - Create disaster recovery plans
@@ -297,6 +319,7 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **Reality:** Distributed systems have multiple, associated causes of failure. Systems are highly interactive.
 
 **How to Fix:**
+
 - Use variety of analytic tools
 - Identify multiple contributing factors
 - Complete failure investigation
@@ -309,12 +332,14 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 **The Mistake:** Underestimating how often failures happen.
 
 **Reality:** Critical failures happen frequently in distributed systems due to:
+
 - Node dispersal
 - Hardware inventory
 - Software issues
 - Network problems
 
 **How to Fix:**
+
 - Build survivable systems
 - Add duplicate capacity
 - Implement failover
@@ -325,21 +350,21 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 
 ### Summary Table of Fallacies
 
-| # | Fallacy | Reality | Key Solution |
-|---|---------|---------|---------------|
-| 1 | Network is reliable | Networks fail constantly | Retry, redundancy |
-| 2 | Latency is zero | Network calls take time | Caching, async |
-| 3 | Bandwidth is infinite | Bandwidth is limited | Compression, prioritization |
-| 4 | Network is secure | Networks are vulnerable | Encryption, auth |
-| 5 | Topology doesn't change | Topology changes often | Dynamic routing |
-| 6 | One administrator | Multiple teams involved | Clear communication |
-| 7 | Transport cost is zero | Network calls cost money | Streamline data |
-| 8 | Network is homogeneous | Different vendors, configs | Design for diversity |
-| 9 | System is monolithic | Multiple components | Manage interactions |
-| 10 | System is fully observable | Hard to see everything | Logging, tracing |
-| 11 | System is always on | Downtime happens | Redundancy, failover |
-| 12 | One root cause | Multiple causes | Complete investigation |
-| 13 | Failures are rare | Failures happen often | Design for failure |
+| #   | Fallacy                    | Reality                    | Key Solution                |
+| --- | -------------------------- | -------------------------- | --------------------------- |
+| 1   | Network is reliable        | Networks fail constantly   | Retry, redundancy           |
+| 2   | Latency is zero            | Network calls take time    | Caching, async              |
+| 3   | Bandwidth is infinite      | Bandwidth is limited       | Compression, prioritization |
+| 4   | Network is secure          | Networks are vulnerable    | Encryption, auth            |
+| 5   | Topology doesn't change    | Topology changes often     | Dynamic routing             |
+| 6   | One administrator          | Multiple teams involved    | Clear communication         |
+| 7   | Transport cost is zero     | Network calls cost money   | Streamline data             |
+| 8   | Network is homogeneous     | Different vendors, configs | Design for diversity        |
+| 9   | System is monolithic       | Multiple components        | Manage interactions         |
+| 10  | System is fully observable | Hard to see everything     | Logging, tracing            |
+| 11  | System is always on        | Downtime happens           | Redundancy, failover        |
+| 12  | One root cause             | Multiple causes            | Complete investigation      |
+| 13  | Failures are rare          | Failures happen often      | Design for failure          |
 
 ---
 
@@ -368,3 +393,9 @@ The **Fallacies of Distributed Computing** are common mistakes people make when 
 - Panchal, S. (2022). "Monolithic V/s Distributed Architectures"
 - Ford, N., Richards, M., Sadalage, P., & Dehghani, Z. (2021). "Software Architecture: The Hard Parts"
 
+??? info "Contribution"
+
+    - **Contributed by:** Namgay Lhamo
+    - **Student ID:** 02240350
+    - **Date:** 06 May 2026
+    - **Course:** SDA202

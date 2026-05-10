@@ -7,10 +7,12 @@
 
 ## 2.2 Monolithic Versus Distributed Architectures
 
+
 ### What is Monolithic Architecture?
 
 A monolithic architecture is a software design where all components (presentation, business logic, data access) are built, deployed, and scaled as a single unified unit.
 
+![Monolithic](../image/monolithic.jpeg)
 **Characteristics:**
 - Single deployment unit (one JAR/WAR file)
 - All components run together
@@ -38,7 +40,7 @@ A monolithic architecture is a software design where all components (presentatio
 - Architecture sinkhole anti-pattern (requests pass through layers with no processing)
 
 ### What is Distributed Architecture?
-
+![distributed](../image/distributed.jpeg)
 A distributed architecture has multiple independent deployment units that communicate through remote access protocols (REST API, messaging, etc.).
 
 **Characteristics:**
@@ -71,6 +73,8 @@ A distributed architecture has multiple independent deployment units that commun
 | Scalability | Scale everything | Scale individual services |
 | Team Structure | One team | Multiple teams |
 
+![monolithic vs distributed architecture](image/monolithic vs distributed.jpeg)
+
 ---
 
 ## 2.2.1 Common Fallacies in Distributed Computing
@@ -78,6 +82,9 @@ A distributed architecture has multiple independent deployment units that commun
 ### Introduction
 
 The **Fallacies of Distributed Computing** are common mistakes people make when dealing with distributed systems. These misconceptions can cause big issues. Understanding them helps build stronger systems.
+
+![fallacies of distributed systems](../image/fallacies_of_distributed_systems.jpeg)
+
 
 ### Fallacy 1: The Network is Reliable
 

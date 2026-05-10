@@ -111,5 +111,10 @@ nav:
       - 1.4 Architecture description languages (ADLs): unit1/topic4.md
       - Summary: unit1/summary.md
 
+  - Unit 2:
+      # - Objective: unit2/objective.md
+      # - 2.1 Introduction: unit1/topic1.md
+      - 2.2 Monolithic Vs Distributed Architecture: unit2/namgaylhamo24.md
+
   - Guidelines: template/guidelines.md
   - Activities: activities/activity1.md
